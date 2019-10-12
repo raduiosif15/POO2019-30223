@@ -2,17 +2,31 @@
 public class LimiteleReprezentarilor {
 		public static void main(String arg[]) {
 			
-		//byte ByteNumber=127 + 4; 
-		//short ShortNumber=32767 +1;
-		int Number=2147483647 + 6 ;
+		byte ByteNumber=Byte.MAX_VALUE; 
+		short ShortNumber=Short.MAX_VALUE;
+		int Number=Integer.MAX_VALUE;
+		long LongNumber=Long.MAX_VALUE;
+			ByteNumber++;
+			ShortNumber++;
+			Number++;
+			LongNumber++;
+		System.out.println("Byte Max + 1 = " + ByteNumber + "\n" +  "Short Max + 1 = " + ShortNumber + "\n"+ "Int Max + 1 = " + Number
+				+"\n" + "Long Max + 1 = " + LongNumber + "\n" );
 		
-		byte Byte1Number=127 - 4; 
-		short Short1Number=32767 - 1;
-		int Number1=2147483647 - 6 ;
-		
-		float Numar_virgula=3.4e38f;
-		double Numar_virgula2=1.7e308;
-		//float diferenta=3.4e39f-3.4e36f;
+		 ByteNumber=Byte.MIN_VALUE; 
+		 ShortNumber=Short.MIN_VALUE;
+		 Number=Integer.MIN_VALUE;
+		 LongNumber=Long.MIN_VALUE;
+		 	ByteNumber--;
+			ShortNumber--;
+			Number--;
+			LongNumber--;
+		System.out.println("Byte Max + 1 = " + ByteNumber + "\n" +  "Short Max + 1 = " + ShortNumber + "\n"+ "Int Max + 1 = " + Number
+					+"\n" + "Long Max + 1 = " + LongNumber+"\n");
+		 
+		Float FloatNumber=2.71828182845904523536f;
+		Double DoubleNumber=2.71828182845904523536;
+		System.out.println(FloatNumber + "\n" + DoubleNumber + "\n");
 		
 		}
 }
