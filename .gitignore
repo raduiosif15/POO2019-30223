@@ -72,4 +72,8 @@ local.properties
 Grades.gsheet
 .idea
 .classpath
+<<<<<<< HEAD
 .project
+=======
+.project
+>>>>>>> d980aa1be000379d4e5d136891095e3043ab0589
