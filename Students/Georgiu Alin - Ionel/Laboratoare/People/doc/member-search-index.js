@@ -1,1 +1,0 @@
-memberSearchIndex = [{"p":"<Unnamed>","c":"Database","l":"addPerson(Person)"},{"p":"<Unnamed>","c":"Database","l":"Database()","url":"%3Cinit%3E()"},{"p":"<Unnamed>","c":"Database","l":"listAll()"}]
