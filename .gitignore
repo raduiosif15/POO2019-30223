@@ -1,3 +1,26 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@Andrada0304 
+4
+524POOLab/POO2019-30223
+ Code Issues 0 Pull requests 17 Projects 0 Wiki Security Insights
+POO2019-30223/.gitignore
+@AnaMariaNanes AnaMariaNanes added extentions to .gitignore
+db1ad9b 4 hours ago
+76 lines (57 sloc)  889 Bytes
+  
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
 .metadata
 bin/
 tmp/
@@ -9,6 +32,15 @@ local.properties
 .settings/
 .loadpath
 .recommenders
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
 
 # Eclipse Core
 .project
@@ -48,3 +80,25 @@ local.properties
 
 # Code Recommenders
 .recommenders/
+
+# Annotation Processing
+.apt_generated/
+.apt_generated_test/
+
+# custom
+Grades.gsheet
+.idea
+.classpath
+.project
+© 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
