@@ -23,25 +23,20 @@ public class Autovehicul {
 		this.setCuloare(culoare);
 		this.setVitezaMaxima(vitezaMaxima);
 	}
-
 	public void setVitezaCurenta(int vitezaCurenta)
 	{
 		this.vitezaCurenta=vitezaCurenta;
 	}
-
 	public int getVitezaCurenta()
 	{
 		return vitezaCurenta;
 	}
-
 	public int getNrRoti() {
 		return nrRoti;
 	}
-
 	public int getTreaptaDeViteza() {
 		return treaptaDeViteza;
 	}
-
 	public void setTreaptaDeViteza(int treaptaDeViteza) {
 		this.treaptaDeViteza = treaptaDeViteza;
 	}
@@ -81,54 +76,45 @@ public class Autovehicul {
 
 
 	static void deplasareAutovehicul(Autovehicul masina, String comanda, int parametru) {
-		if (comanda.equals("accelerare"))
+		if (comanda.equals("Acelerare"))
 		{
 			masina.accelerareAutovehicul(masina,parametru);
 		}
-		else if (comanda.equals("decelerare"))
+		else if (comanda.equals("Franare"))
 			{
 				masina.decelerareAutovehicul(masina,parametru);
 			}
-			else if (comanda.equals("schimbareViteza"))
+			else if (comanda.equals("Schimba Viteza"))
 				{
 					masina.schimbareTreaptaViteza(masina,parametru);
 				}
-				else if (comanda.equals("oprire")) {
+				else if (comanda.equals("Oprire")) {
 					masina.oprireAutovehicul(masina);	
 				} else
-					System.out.print("comanda incorecta");
+					System.out.print("Cmd Incorecta");
 	}
-
 	public Sofer getSofer() {
 		return sofer;
 	}
-
 	public void setSofer(Sofer sofer) {
 		this.sofer = sofer;
 	}
-
 	public String getMarca() {
 		return marca;
 	}
-
 	public void setMarca(String marca) {
 		this.marca = marca;
 	}
-
 	public Color getCuloare() {
 		return culoare;
 	}
-
 	public void setCuloare(Color culoare) {
 		this.culoare = culoare;
 	}
-
 	public int getVitezaMaxima() {
 		return vitezaMaxima;
 	}
-
 	public void setVitezaMaxima(int vitezaMaxima) {
 		this.vitezaMaxima = vitezaMaxima;
 	}
-
 }
