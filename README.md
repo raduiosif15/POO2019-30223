@@ -1,3 +1,15 @@
+# Updates
+
+Spreadsheet cu prezență și notare: 
+https://docs.google.com/spreadsheets/d/1wQtxeOFPDOXO0D1saaj5DhQwzMj66Tpv69GaV1L0Vpo/edit#gid=0
+
+Un tutorial folositor și interesant de git care este creat sub forma unui joc
+https://learngitbranching.js.org
+
+Cartea CLEAN CODE: 
+http://ptgmedia.pearsoncmg.com/images/9780132350884/samplepages/9780132350884.pdf
+
+
 # Java
 
 ##
