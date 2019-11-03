@@ -1,15 +1,4 @@
 # Compiled class file
-
-*.class
-
-
-
-# Log file
-
-*.log
-
-
-
 .metadata
 
 bin/
@@ -128,22 +117,3 @@ local.properties
 
 .recommenders/
 
-
-
-# Annotation Processing
-
-.apt_generated/
-
-.apt_generated_test/
-
-
-
-# custom
-
-Grades.gsheet
-
-.idea
-
-.classpath
-
-.project
