@@ -1,4 +1,4 @@
-# Compiled class file
+
 .metadata
 
 bin/
@@ -19,7 +19,7 @@ local.properties
 
 .loadpath
 
-.recommenders
+
 # Eclipse Core
 
 .project
