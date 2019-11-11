@@ -37,4 +37,14 @@ public class Card {
     public String getSuit() {
         return this.suit;
     }
+
+    public int compareTo(Comparable comparableObject) {
+        if (comparableObject instanceof Card){
+            int result = rank.compareTo(((Card) comparableObject).getRank());
+            if (result == 0){
+                return suit.compareTo(((Card) comparableObject).getSuit());
+            }
+            return result;
+        }
+    }
 }
