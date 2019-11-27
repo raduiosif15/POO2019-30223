@@ -1,10 +1,16 @@
 package javasmmr.zoowsome.models.animals;
 
+import javasmmr.zoowsome.controllers.Constants;
+
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLStreamException;
 import java.util.Random;
 
+import static javasmmr.zoowsome.repositories.AnimalRepository.createNode;
+
 public class Carp extends Aquatic {
-	public Carp(double maintenaceCost, double dangerPerc) {
-		super(maintenaceCost, dangerPerc);
+	public Carp() {
+		super();
 		this.name = "Carp";
 		this.nrOfLegs = 0;
 		this.waterType = typeOfWater.freshWater;
@@ -18,5 +24,10 @@ public class Carp extends Aquatic {
 			return true;
 		}
 		return false;
+	}
+
+	public void encodeToXml(XMLEventWriter eventWriter) throws XMLStreamException {
+		super.encodeToXml(eventWriter);
+		createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT, Constants.Animal.Aquatic.Carp);
 	}
 }

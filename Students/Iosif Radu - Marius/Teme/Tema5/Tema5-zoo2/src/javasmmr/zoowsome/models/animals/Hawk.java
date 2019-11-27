@@ -1,10 +1,16 @@
 package javasmmr.zoowsome.models.animals;
 
+import javasmmr.zoowsome.controllers.Constants;
+
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLStreamException;
 import java.util.Random;
 
+import static javasmmr.zoowsome.repositories.AnimalRepository.createNode;
+
 public class Hawk extends Bird{
-	public Hawk(double maintenaceCost, double dangerPerc) {
-		super(maintenaceCost, dangerPerc);
+	public Hawk() {
+		super();
 		this.name = "Hawk";
 		this.nrOfLegs = 2;
 		this.migrates = false;
@@ -19,5 +25,10 @@ public class Hawk extends Bird{
 			return true;
 		}
 		return false;
+	}
+
+	public void encodeToXml(XMLEventWriter eventWriter) throws XMLStreamException {
+		super.encodeToXml(eventWriter);
+		createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT, Constants.Animal.Bird.Hawk);
 	}
 }

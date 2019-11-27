@@ -1,10 +1,16 @@
 package javasmmr.zoowsome.models.animals;
 
+import javasmmr.zoowsome.controllers.Constants;
+
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLStreamException;
 import java.util.Random;
 
+import static javasmmr.zoowsome.repositories.AnimalRepository.createNode;
+
 public class Monkey extends Mammal {
-	public Monkey(double maintenaceCost, double dangerPerc) {
-		super(maintenaceCost, dangerPerc);
+	public Monkey() {
+		super();
 		this.name = "Monkey";
 		this.nrOfLegs = 4;
 	}
@@ -17,5 +23,10 @@ public class Monkey extends Mammal {
 			return true;
 		}
 		return false;
+	}
+
+	public void encodeToXml(XMLEventWriter eventWriter) throws XMLStreamException {
+		super.encodeToXml(eventWriter);
+		createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT, Constants.Animal.Mammal.Monkey);
 	}
 }

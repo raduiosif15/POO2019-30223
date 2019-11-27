@@ -1,9 +1,17 @@
 package javasmmr.zoowsome.controllers;
 
+import javasmmr.zoowsome.repositories.AnimalRepository;
 import javasmmr.zoowsome.services.factories.*;
 import javasmmr.zoowsome.models.animals.*;
 import javasmmr.zoowsome.models.employees.Caretaker;
 import javasmmr.zoowsome.models.employees.Employee;
+import org.xml.sax.SAXException;
+
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.stream.XMLStreamException;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
 
 //recunosc ca am "imprumutat" functia main de la Dragos pentru a verifica clasele
 
@@ -65,6 +73,28 @@ public class MainController {
         }
         printAnimals(animale);
         printEmployees(employees);
+
+        AnimalRepository animalRepository = new AnimalRepository();
+        ArrayList<Animal> animals = new ArrayList<Animal>();
+
+        try {
+            animals = animalRepository.load();
+        } catch (ParserConfigurationException | SAXException | IOException e1) {
+            e1.printStackTrace();
+        }
+        try {
+            animalRepository.save(animals);
+        } catch (XMLStreamException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        try {
+            animals = animalRepository.load();
+        } catch (ParserConfigurationException | SAXException | IOException e1) {
+            e1.printStackTrace();
+        }
+
     }
 
     public static void printAnimals(Animal[] animale) {

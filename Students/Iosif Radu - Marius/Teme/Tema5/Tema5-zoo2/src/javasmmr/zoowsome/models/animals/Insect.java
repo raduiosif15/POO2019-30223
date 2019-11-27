@@ -1,14 +1,19 @@
 package javasmmr.zoowsome.models.animals;
 
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLStreamException;
+
+import static javasmmr.zoowsome.repositories.AnimalRepository.createNode;
+
 public class Insect extends Animal {
 	public boolean canFly;
 	public boolean isDangerous;
-	
-	public Insect(double maintenaceCost, double dangerPerc) {
-		super(maintenaceCost, dangerPerc);
-	}
 
-	public void setCanFly(boolean canFly) {
+    public Insect() {
+        super();
+    }
+
+    public void setCanFly(boolean canFly) {
 		this.canFly = canFly;
 	}
 
@@ -27,5 +32,16 @@ public class Insect extends Animal {
 	@Override
 	public boolean kill() {
 		return false;
+	}
+
+	public void encodeToXml(XMLEventWriter eventWriter) throws XMLStreamException {
+		super.encodeToXml(eventWriter);
+		createNode(eventWriter, "canFly", String.valueOf(getCanFly()));
+		createNode(eventWriter, "isDangerous", String.valueOf(getIsDangerous()));
+	}
+
+	public void decodeFromXml(org.w3c.dom.Element element) {
+		setCanFly(Boolean.valueOf(element.getElementsByTagName("canFly").item(0).getTextContent()));
+		setIsDangerous(Boolean.valueOf(element.getElementsByTagName("isDangerous").item(0).getTextContent()));
 	}
 }
