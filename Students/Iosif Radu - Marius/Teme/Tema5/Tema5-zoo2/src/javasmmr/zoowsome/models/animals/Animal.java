@@ -79,10 +79,10 @@ public class Animal implements Killer, XML_Parsable {
         createNode(eventWriter, "takenCareOf", String.valueOf(this.takenCareOf));
     }
 
-    @Override
-    public void decodeFromXml(Element element) {
+	@Override
+	public void decodeFromXml(Element element) {
 
-    }
+	}
 
 	public void decodeFromXml(org.w3c.dom.Element element) {
 		setNrOfLegs(Integer.valueOf(element.getElementsByTagName("nrOfLegs").item(0).getTextContent()));

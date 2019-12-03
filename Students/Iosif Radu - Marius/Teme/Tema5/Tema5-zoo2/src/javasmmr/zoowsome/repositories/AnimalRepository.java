@@ -83,76 +83,91 @@ public class AnimalRepository {
                         Animal butterfly = new Butterfly();
                         butterfly.decodeFromXml(element);
                         animals.add(butterfly);
+                        break;
 
                     case Constants.Animal.Insect.Cockroach:
                         Animal cockroach = new Cockroach();
                         cockroach.decodeFromXml(element);
                         animals.add(cockroach);
+                        break;
 
                     case Constants.Animal.Insect.Spider:
                         Animal spider = new Spider();
                         spider.decodeFromXml(element);
                         animals.add(spider);
+                        break;
 
                     case Constants.Animal.Aquatic.Carp:
                         Animal carp = new Carp();
                         carp.decodeFromXml(element);
                         animals.add(carp);
+                        break;
 
                     case Constants.Animal.Aquatic.Dolphin:
                         Animal dolphin = new Dolphin();
                         dolphin.decodeFromXml(element);
                         animals.add(dolphin);
+                        break;
 
                     case Constants.Animal.Aquatic.Whale:
                         Animal whale = new Whale();
                         whale.decodeFromXml(element);
                         animals.add(whale);
+                        break;
 
                     case Constants.Animal.Bird.Dove:
                         Animal dove = new Dove();
                         dove.decodeFromXml(element);
                         animals.add(dove);
+                        break;
 
                     case Constants.Animal.Bird.Hawk:
                         Animal hawk = new Hawk();
                         hawk.decodeFromXml(element);
                         animals.add(hawk);
+                        break;
 
                     case Constants.Animal.Bird.Hen:
                         Animal hen = new Hen();
                         hen.decodeFromXml(element);
                         animals.add(hen);
+                        break;
 
                     case Constants.Animal.Mammal.Cow:
                         Animal cow = new Cow();
                         cow.decodeFromXml(element);
                         animals.add(cow);
+                        break;
 
                     case Constants.Animal.Mammal.Monkey:
                         Animal monkey = new Monkey();
                         monkey.decodeFromXml(element);
                         animals.add(monkey);
+                        break;
 
                     case Constants.Animal.Mammal.Tiger:
                         Animal tiger = new Tiger();
                         tiger.decodeFromXml(element);
                         animals.add(tiger);
+                        break;
 
                     case Constants.Animal.Reptile.Crocodile:
                         Animal crocodile = new Crocodile();
                         crocodile.decodeFromXml(element);
                         animals.add(crocodile);
+                        break;
 
                     case Constants.Animal.Reptile.Snake:
                         Animal snake = new Snake();
                         snake.decodeFromXml(element);
                         animals.add(snake);
+                        break;
 
                     case Constants.Animal.Reptile.Turtle:
                         Animal turtle = new Turtle();
                         turtle.decodeFromXml(element);
                         animals.add(turtle);
+                        break;
 
                     default:
                         break;

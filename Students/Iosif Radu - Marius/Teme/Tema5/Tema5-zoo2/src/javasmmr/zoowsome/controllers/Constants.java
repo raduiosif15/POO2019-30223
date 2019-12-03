@@ -3,6 +3,7 @@ package javasmmr.zoowsome.controllers;
 public final class Constants {
 
 	public static final class XML_TAGS {
+		public static final String EMPLOYEE = "EMPLOYEE";
 		public static final String ANIMAL = "ANIMAL";
 		public static final String DISCRIMINANT = "DISCRIMINANT";
 	}

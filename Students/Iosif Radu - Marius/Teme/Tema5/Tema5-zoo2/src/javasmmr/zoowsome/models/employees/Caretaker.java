@@ -3,6 +3,8 @@ package javasmmr.zoowsome.models.employees;
 import javasmmr.zoowsome.controllers.*;
 import javasmmr.zoowsome.models.animals.Animal;
 
+import java.math.BigDecimal;
+
 public class Caretaker extends Employee implements Caretaker_I{
 	public double workingHours;
 	
@@ -35,5 +37,9 @@ public class Caretaker extends Employee implements Caretaker_I{
 			}
 		}
 		return null;
+	}
+
+	public void decodeFromXml(org.w3c.dom.Element element) {
+		setWorkingHours(Integer.valueOf(element.getElementsByTagName("workingHours").item(0).getTextContent()));
 	}
 }

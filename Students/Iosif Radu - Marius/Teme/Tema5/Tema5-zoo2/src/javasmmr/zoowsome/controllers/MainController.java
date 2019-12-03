@@ -1,6 +1,7 @@
 package javasmmr.zoowsome.controllers;
 
 import javasmmr.zoowsome.repositories.AnimalRepository;
+import javasmmr.zoowsome.repositories.EmployeeRepository;
 import javasmmr.zoowsome.services.factories.*;
 import javasmmr.zoowsome.models.animals.*;
 import javasmmr.zoowsome.models.employees.Caretaker;
@@ -39,20 +40,20 @@ public class MainController {
 
         employees[0] = employeeFactory.getEmployee(Constants.Employee.Caretaker);
         employees[0].setName("Radu");
-        employees[0].setId();
+        employees[0].setId(Long.valueOf(element.getElementsByTagName("id").item(0).getTextContent()));
         
         employees[1] = employeeFactory.getEmployee(Constants.Employee.Caretaker);
         employees[1].setName("Vlad");
-        employees[1].setId();
+        employees[1].setId(Long.valueOf(element.getElementsByTagName("id").item(0).getTextContent()));
         while (employees[0].getId() == employees[1].getId()) {
-        	employees[1].setId();
+        	employees[1].setId(Long.valueOf(element.getElementsByTagName("id").item(0).getTextContent()));
         }
         
         employees[2] = employeeFactory.getEmployee(Constants.Employee.Caretaker);
         employees[2].setName("Catalin");
-        employees[2].setId();
+        employees[2].setId(Long.valueOf(element.getElementsByTagName("id").item(0).getTextContent()));
         while (employees[0].getId() == employees[2].getId() || employees[1].getId() == employees[2].getId()) {
-        	employees[2].setId();
+        	employees[2].setId(Long.valueOf(element.getElementsByTagName("id").item(0).getTextContent()));
         }
         
         printEmployees(employees);
@@ -91,6 +92,27 @@ public class MainController {
         }
         try {
             animals = animalRepository.load();
+        } catch (ParserConfigurationException | SAXException | IOException e1) {
+            e1.printStackTrace();
+        }
+
+        EmployeeRepository employeeRepository = new EmployeeRepository();
+        ArrayList<Employee> angajati = new ArrayList<Employee>();
+
+        try {
+            angajati = employeeRepository.load();
+        } catch (ParserConfigurationException | SAXException | IOException e1) {
+            e1.printStackTrace();
+        }
+        try {
+            employeeRepository.save(angajati);
+        } catch (XMLStreamException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        try {
+            angajati = employeeRepository.load();
         } catch (ParserConfigurationException | SAXException | IOException e1) {
             e1.printStackTrace();
         }
