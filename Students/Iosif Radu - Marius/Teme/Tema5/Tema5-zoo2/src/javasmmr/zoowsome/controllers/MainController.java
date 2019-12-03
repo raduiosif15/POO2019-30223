@@ -40,20 +40,20 @@ public class MainController {
 
         employees[0] = employeeFactory.getEmployee(Constants.Employee.Caretaker);
         employees[0].setName("Radu");
-        employees[0].setId(Long.valueOf(element.getElementsByTagName("id").item(0).getTextContent()));
+        employees[0].setId((long) 1);
         
         employees[1] = employeeFactory.getEmployee(Constants.Employee.Caretaker);
         employees[1].setName("Vlad");
-        employees[1].setId(Long.valueOf(element.getElementsByTagName("id").item(0).getTextContent()));
+        employees[1].setId((long) 1);
         while (employees[0].getId() == employees[1].getId()) {
-        	employees[1].setId(Long.valueOf(element.getElementsByTagName("id").item(0).getTextContent()));
+        	employees[1].setId((long) 1);
         }
         
         employees[2] = employeeFactory.getEmployee(Constants.Employee.Caretaker);
         employees[2].setName("Catalin");
-        employees[2].setId(Long.valueOf(element.getElementsByTagName("id").item(0).getTextContent()));
+        employees[2].setId((long) 1);
         while (employees[0].getId() == employees[2].getId() || employees[1].getId() == employees[2].getId()) {
-        	employees[2].setId(Long.valueOf(element.getElementsByTagName("id").item(0).getTextContent()));
+        	employees[2].setId((long) 1);
         }
         
         printEmployees(employees);
