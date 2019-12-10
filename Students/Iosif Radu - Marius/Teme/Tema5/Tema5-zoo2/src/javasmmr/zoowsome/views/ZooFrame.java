@@ -24,7 +24,7 @@ public class ZooFrame extends JFrame implements ZooFrame_I {
         contentPanel = new JPanel();
         contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
         contentPanel.setBackground(Color.red);
-        add(contentPanel, BorderLayout.CENTER)
+        add(contentPanel, BorderLayout.CENTER);
     }
 
     private void setLocationRelativeTo(int exitOnClose) {
