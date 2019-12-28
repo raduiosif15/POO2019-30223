@@ -7,6 +7,10 @@ public class Masina {
         this.culoare = culoare;
     }
 
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
     public void setCuloare(String culoare) {
         this.culoare = culoare;
     }
