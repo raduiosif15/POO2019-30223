@@ -1175,7 +1175,7 @@ public class HangmanView extends JFrame {
         pierderi.setBackground(Color.CYAN);
         pierderi.setBounds(204, 11, 98, 34);
         cuvantDeGhicit.add(pierderi);
-        
+
         nrVictorii.setBorder(null);
         nrVictorii.setHorizontalAlignment(SwingConstants.CENTER);
         nrVictorii.setFont(new Font("Times New Roman", Font.BOLD, 18));
