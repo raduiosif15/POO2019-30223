@@ -68,6 +68,9 @@ public class HangmanView extends JFrame {
     private int nrJocuriPierdute = 0;
     private int nrJocuriCastigate = 0;
 
+    /**
+     *
+     */
     public HangmanView() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 700, 480);
